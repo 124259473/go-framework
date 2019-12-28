@@ -7,9 +7,13 @@ var myWsApi = wsProtocol + "://" + api + "/api/v1";
 
 // 登陆
 function login() {
-    const name = $("#name").val();
-    const password = $("#password").val();
+    let name = $("#name").val();
+    let password = $("#password").val();
 
+    if(name == "" || password == ""){
+        alert("用户名或密码错误！");
+        return；
+    }
     $.ajax({
         url: myApi + "/user/login",
         method: "POST",
