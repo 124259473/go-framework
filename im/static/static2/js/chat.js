@@ -1,8 +1,8 @@
 // api地址等信息
-var api = "localhost:8080";
+var api = "127.0.0.1:8080";
 var httpProtocol = "http";
 var wsProtocol = "ws";
-var myApi = httpProtocol + "://" + api ;
+var myApi = httpProtocol + "://" + api;
 var myWsApi = wsProtocol + "://" + api + "/api/v1";
 
 // 登陆
@@ -17,16 +17,30 @@ function login() {
             name: name,
             password: password
         },
+        dataType: "json",
+        // headers:{
+        //     Access-Control-Allow-Origin:"*",
+        //     access-control-allow-methods: "GET, POST, OPTIONS, PUT, DELETE"
+        //
+        //
+        // },
+
+        // beforeSend: function(request) {
+        //     request.setRequestHeader("Access-Control-Allow-Origin", "*");
+        //     request.setRequestHeader("Access-Control-Allow-Methods","GET, POST, OPTIONS, PUT, DELETE")
+        // },
+
+
         success: function (res) {
             //console.log(res)
-            if (res.status === 200) {
+            if (res.Success === true) {
                 // 储存用户id
                 //$.data(myObj, "uid", res.data.id)
-                Cookies.set("uid", res.data.id)
+                Cookies.set("uid", res.Data.Id)
 
                 location.href = "index.html"
-            } else if (res.status === 211) {
-                confirm(res.msg)
+            } else if  (res.Success === false) {
+                confirm("失败");
             }
         }
     })
@@ -156,10 +170,10 @@ $("#contact").on("click", ".contact", function () {
 });
 
 // 建立websocket
-function newWebSocket(){
+function newWebSocket() {
 
     // 关闭之前的连接
-    if(ws !== undefined) {
+    if (ws !== undefined) {
         ws.close();
     }
 
@@ -452,7 +466,7 @@ function newMessageFile(filePath) {
 
 // 聊天内容
 // 文件类型
-function setUpLoadFile(){
+function setUpLoadFile() {
     // 聊天内容
     // 文件类型
     $("#fileUp").after('<input type="file" id="upLoadFile" name="file" style="display:none" onchange ="uploadFile()">');
@@ -475,7 +489,7 @@ function uploadFile() {
         success: function (res) {
             //console.log(res);
             // 文件上传成功
-            if(res.status === 224){
+            if (res.status === 224) {
                 //return res.path;
                 // 发送文件类型消息
                 newMessageFile(res.path);
@@ -573,19 +587,19 @@ function disGroup(friendId) {
 var heartCheck = {
     timeout: 1000 * 60 * 9,        // 9分钟发一次心跳，比server端设置的连接时间稍微小一点，在接近断开的情况下以通信的方式去重置连接时间。
     serverTimeoutObj: null,
-    reset: function(){
+    reset: function () {
         //clearTimeout(this.timeoutObj);
         clearTimeout(this.serverTimeoutObj);
         return this;
     },
-    start: function(){
+    start: function () {
         var self = this;
-        this.serverTimeoutObj = setInterval(function(){
-            if(ws.readyState === 1){
+        this.serverTimeoutObj = setInterval(function () {
+            if (ws.readyState === 1) {
                 console.log("连接状态，发送消息保持连接");
                 ws.send("ping");
                 heartCheck.reset().start();    // 如果获取到消息，说明连接是正常的，重置心跳检测
-            }else{
+            } else {
                 console.log("断开状态，尝试重连");
                 newWebSocket();
             }

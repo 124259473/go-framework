@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b1b1733-5cc2-4630-92f7-5d96dd411d03" name="Default Changelist" comment="" />
+    <list default="true" id="3b1b1733-5cc2-4630-92f7-5d96dd411d03" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
   <component name="ProjectId" id="1Vb7jKYurzcjLTxbUW7dG87JtGs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,6 +26,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -26,7 +38,7 @@
   </component>
   <component name="RunManager">
     <configuration name="nginx" type="nginx.configuration.type" factoryName="nginx server">
-      <option name="serverDescriptorId" value="nginx.descriptor.1577511226084" />
+      <option name="serverDescriptorId" value="nginx.descriptor.1577526249394" />
       <option name="showHttpLog" value="false" />
       <option name="showErrorLog" value="false" />
       <option name="httpLogPath" value="/usr/local/var/log/nginx/access.log" />
@@ -58,6 +70,7 @@
       <updated>1577510075182</updated>
       <workItem from="1577510080133" duration="146000" />
       <workItem from="1577510237837" duration="1799000" />
+      <workItem from="1577529960423" duration="2094000" />
     </task>
     <servers />
   </component>
@@ -65,30 +78,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="104" y="40" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577511428168">
+    <state x="104" y="40" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577529995321">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="104" y="40" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.709@0.23.1280.709" timestamp="1577511428168" />
+    <state x="104" y="40" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.709@0.23.1280.709" timestamp="1577529995321" />
     <state x="264" y="128" width="750" height="500" key="#nginx_Servers" timestamp="1577511241672">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="264" y="128" width="750" height="500" key="#nginx_Servers/0.23.1280.709@0.23.1280.709" timestamp="1577511241672" />
-    <state width="1259" height="162" key="GridCell.Tab.0.bottom" timestamp="1577511593081">
-      <screen x="0" y="0" width="1280" height="732" />
+    <state width="1259" height="185" key="GridCell.Tab.0.bottom" timestamp="1577532575335">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1259" height="162" key="GridCell.Tab.0.bottom/0.0.1280.732@0.0.1280.732" timestamp="1577511593081" />
-    <state width="1259" height="162" key="GridCell.Tab.0.center" timestamp="1577511593080">
-      <screen x="0" y="0" width="1280" height="732" />
+    <state width="1259" height="185" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1577532575335" />
+    <state width="1259" height="185" key="GridCell.Tab.0.center" timestamp="1577532575334">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1259" height="162" key="GridCell.Tab.0.center/0.0.1280.732@0.0.1280.732" timestamp="1577511593080" />
-    <state width="1259" height="162" key="GridCell.Tab.0.left" timestamp="1577511593080">
-      <screen x="0" y="0" width="1280" height="732" />
+    <state width="1259" height="185" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1577532575334" />
+    <state width="1259" height="185" key="GridCell.Tab.0.left" timestamp="1577532575334">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1259" height="162" key="GridCell.Tab.0.left/0.0.1280.732@0.0.1280.732" timestamp="1577511593080" />
-    <state width="1259" height="162" key="GridCell.Tab.0.right" timestamp="1577511593081">
-      <screen x="0" y="0" width="1280" height="732" />
+    <state width="1259" height="185" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1577532575334" />
+    <state width="1259" height="185" key="GridCell.Tab.0.right" timestamp="1577532575335">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1259" height="162" key="GridCell.Tab.0.right/0.0.1280.732@0.0.1280.732" timestamp="1577511593081" />
+    <state width="1259" height="185" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1577532575335" />
     <state x="149" y="23" width="982" height="709" key="SettingsEditor" timestamp="1577510225761">
       <screen x="0" y="23" width="1280" height="709" />
     </state>

@@ -1,6 +1,9 @@
 package controllers
 
-import "im/models"
+import (
+	"im/models"
+	"time"
+)
 
 // UserController handles WebSocket requests.
 type UserController struct {
@@ -11,8 +14,15 @@ type UserController struct {
 func (this *UserController) Login() {
 	// Safe check.
 	//uname := this.GetString("uname")
+	result := models.Result{}
+	result.Success = true
 
-	this.Data["json"] = models.Result{}
+	data := models.LoginData{}
+	data.Id = time.Now().Nanosecond()
+	result.Data=data
+	result.Data=data
+	this.Data["json"] = result
+
 	this.ServeJSON()
 
 }
