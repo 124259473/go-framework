@@ -33,6 +33,15 @@ func (cache *LocalCache) Get(key string) string {
 	return Cache.Value[key]
 }
 
+
+func (cache *LocalCache) Del(key string) string {
+	if key == "" {
+		return ""
+	}
+	delete(Cache.Value,key)
+}
+
+
 func init() {
 	value := make(map[string]string)
 	Cache = GetInstance()
