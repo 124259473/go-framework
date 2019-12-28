@@ -33,14 +33,12 @@ func (cache *LocalCache) Get(key string) string {
 	return Cache.Value[key]
 }
 
-
-func (cache *LocalCache) Del(key string) string {
+func (cache *LocalCache) Del(key string) {
 	if key == "" {
-		return ""
+		return
 	}
-	delete(Cache.Value,key)
+	delete(Cache.Value, key)
 }
-
 
 func init() {
 	value := make(map[string]string)

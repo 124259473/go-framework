@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"im/cache"
 	"im/models"
 	"time"
 )
@@ -12,11 +13,11 @@ type UserController struct {
 
 // Get method handles GET requests for UserController.
 func (this *UserController) Login() {
-	// Safe check.
-	//uname := this.GetString("uname")
+	name := this.GetString("name")
+	cache := cache.GetInstance()
+	cache.Put(name,name)
 	result := models.Result{}
 	result.Success = true
-
 	data := models.LoginData{}
 	data.Id = time.Now().Nanosecond()
 	result.Data=data
@@ -26,3 +27,18 @@ func (this *UserController) Login() {
 	this.ServeJSON()
 
 }
+
+func (this *UserController) GetUserById()  {
+
+
+
+	
+}
+
+
+
+
+
+
+
+

@@ -21,4 +21,8 @@ func init() {
 	beego.Router("/ws/join", &controllers.WebSocketController{}, "get:Join")
 
 	beego.Router("/user/login", &controllers.UserController{},"post:Login")
+
+	//
+	beego.Router("/user/getUserById", &controllers.UserController{},"get:GetUserById")
+
 }

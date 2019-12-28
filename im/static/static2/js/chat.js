@@ -12,7 +12,7 @@ function login() {
 
     if(name == "" || password == ""){
         alert("用户名或密码错误！");
-        return；
+        return ;
     }
     $.ajax({
         url: myApi + "/user/login",
@@ -53,12 +53,14 @@ function login() {
 
 // 个人信息
 function myInfo() {
+
+    debugger;
     // 用户id
     const uid = Cookies.get("uid")
 
     // 请求数据
     $.ajax({
-        url: myApi + "/user/id/" + uid,
+        url: myApi + "/user/getUserById?userId=" + uid,
         method: "GET",
         data: {
             uid: uid,
@@ -93,11 +95,7 @@ function userList() {
         },
         success: function (res) {
             if (res.status === 200) {
-                // 修改数据
-                // 通过模板引擎渲染数据
 
-                // 我一个后端写起前端,还用起看起来牛逼的用法
-                // 我猖狂了,嗯,对,我猖狂了
                 res.data.userList.forEach(
                     function (val) {
                         //console.log(val);
